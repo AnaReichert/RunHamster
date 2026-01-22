@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RunHamster</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao RunHamster!</h1>
+        <p>Este é a sua calculadora de IMC e gasto calórico.</p>
+        <div class="informacoes">
+            <input type="number" id="weight" placeholder="Peso (kg)">
+            <input type="number" id="height" placeholder="Altura (cm)">
+            <input type="number" id="age" placeholder="Idade (anos)">
+            <select id="activityLevel">
+                <option value="1.2">Sedentário</option>
+                <option value="1.375">Levemente ativo</option>
+                <option value="1.55">Moderadamente ativo</option>
+                <option value="1.725">Muito ativo</option>
+                <option value="1.9">Extremamente ativo</option>
+            </select>
+            <select id="gender">
+                <option value="male">Masculino</option>     
+                <option value="female">Feminino</option>
+            </select>
+            <button id="calculateBtn">Calcular</button>
+        </div>
+        <div class="resultados">
+            <h2>Resultados:</h2>
+            <p id="bmiResult">IMC: </p>
+            <p id="calorieResult">Gasto Calórico Diário: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
