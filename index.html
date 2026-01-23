@@ -11,22 +11,38 @@
         <h1>Bem-vindo ao RunHamster!</h1>
         <p>Este é a sua calculadora de IMC e gasto calórico.</p>
         <div class="informacoes">
-            <input type="number" id="weight" placeholder="Peso (kg)">
-            <input type="number" id="height" placeholder="Altura (cm)">
-            <input type="number" id="age" placeholder="Idade (anos)">
-            <select id="activityLevel">
-                <option value="1.2">Sedentário</option>
-                <option value="1.375">Levemente ativo</option>
-                <option value="1.55">Moderadamente ativo</option>
-                <option value="1.725">Muito ativo</option>
-                <option value="1.9">Extremamente ativo</option>
-            </select>
-            <select id="gender">
-                <option value="male">Masculino</option>     
-                <option value="female">Feminino</option>
-            </select>
-            <button id="calculateBtn">Calcular</button>
+            <div class="input-group">
+            <input type="number" id="weight" placeholder=" ">
+            <label for="weight">Peso (kg)</label>
         </div>
+
+        <div class="input-group">
+            <input type="number" id="height" placeholder=" ">
+            <label for="height">Altura (cm)</label>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="age" placeholder=" ">
+            <label for="age">Idade (anos)</label>
+        </div>
+
+        <select id="activityLevel">
+            <option value="" disabled selected>Nível de Atividade</option>
+            <option value="1.2">Sedentário</option>
+            <option value="1.375">Levemente ativo</option>
+            <option value="1.55">Moderadamente ativo</option>
+            <option value="1.725">Muito ativo</option>
+            <option value="1.9">Extremamente ativo</option>
+        </select>
+
+        <select id="gender">
+            <option value="" disabled selected>Gênero</option>
+            <option value="male">Masculino</option>     
+            <option value="female">Feminino</option>
+        </select>
+
+        <button id="calculateBtn">Calcular</button>
+
         <div class="resultados">
             <h2>Resultados:</h2>
             <p id="bmiResult">IMC: </p>

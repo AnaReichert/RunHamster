@@ -15,7 +15,17 @@ function calculate() {
     const activity = parseFloat(activitySelect.value);
 
     const imc = weight / ((height / 100) ** 2);
-    
+
+    const faixasIMC = [
+    { max: 18.5, label: 'Abaixo do peso', cor: '#ffcc00' },
+    { max: 24.9, label: 'Peso Normal', cor: '#2ecc71' },
+    { max: 29.9, label: 'Sobrepeso', cor: '#e67e22' },
+    { max: 34.9, label: 'Obesidade Grau I', cor: '#d81b60' },
+    { max: Infinity, label: 'Obesidade Severa', cor: '#c0392b' }
+    ];
+
+    const faixa = faixasIMC.find(f => imc <= f.max);
+
     let tmb;
     if (gender === 'male') {
         tmb = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
@@ -24,9 +34,8 @@ function calculate() {
     }
 
     const dailyCalories = tmb * activity;
-
-
-    bmiResult.textContent = `IMC: ${imc.toFixed(2)}`;
+    bmiResult.style.color = faixa.cor;
+    bmiResult.innerHTML = `IMC: ${imc.toFixed(2)} (${faixa.label})`;    
     calorieResult.innerHTML = `Gasto Diário: ${dailyCalories.toFixed(0)} kcal`;
 }
 
