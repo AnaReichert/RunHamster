@@ -14,6 +14,11 @@ function calculate() {
     const gender = genderSelect.value;
     const activity = parseFloat(activitySelect.value);
 
+    if (!weightInput.value || !heightInput.value || !ageInput.value || gender === '' || activity === 0) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
     const imc = weight / ((height / 100) ** 2);
 
     const faixasIMC = [
