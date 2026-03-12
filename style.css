@@ -30,15 +30,17 @@
     --title-color: #d81b60;
     --input-border: #fce4ec;
     --container-border: #ffffff;
+    --select-background: #ffffff;
 }
 
 [data-theme="dark"] {
     --bg-body: linear-gradient(135deg, #1a1a2e, #16213e);
     --container-bg: rgba(26, 26, 46, 0.95);
-    --text-color: #e0e0e0;
+    --text-color: #e1e1e1;
     --title-color: #ff69b4;
     --input-border: #0f3460;
     --container-border: #0f3460;
+    --select-background: #1a1a2e;
 }
 
 body {
@@ -132,6 +134,11 @@ input:focus, select:focus {
     background-color: var(--container-bg); 
     padding: 0 5px;
     font-weight: bold;
+}
+
+.selection, option {
+    background-color: var(--select-background); 
+    backdrop-filter: blur(10px);
 }
 
 button {
